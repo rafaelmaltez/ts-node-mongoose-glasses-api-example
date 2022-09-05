@@ -25,6 +25,8 @@ class FrameController {
     res: Response<IFrame>
   ) {
     const result = await this._service.readOne(req.params.id)
-    return res.status(200).json(result)
+    return res.status(200).json(result!)
   }
 }
+
+export default FrameController;
