@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const frameZodSchema = z.object({
+export const FrameZodSchema = z.object({
   material: z.string(),
   color: z.string({
     required_error: 'Color is required',
@@ -8,6 +8,6 @@ export const frameZodSchema = z.object({
   }).min(3, { message: 'Color must be 3 or more characters long'})
 })
 
-type IFrame = z.infer<typeof frameZodSchema>
+type IFrame = z.infer<typeof FrameZodSchema>
 
 export default IFrame;
